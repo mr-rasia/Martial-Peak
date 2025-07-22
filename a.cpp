@@ -1,21 +1,13 @@
 #include <iostream>
 using namespace std;
+void f(int count) {
+    if (count == 4) return;
+    cout << count << endl;
+    f(count + 1); // increment count in recursive call
+}
 
 int main() {
-    int num1, num2, sum;
-
-    // Input from user
-    cout << "Enter first number: ";
-    cin >> num1;
-
-    cout << "Enter second number: ";
-    cin >> num2;
-
-    // Calculate sum
-    sum = num1 + num2;
-
-    // Output the result
-    cout << "The sum of " << num1 << " and " << num2 << " is " << sum << endl;
-
+    int count = 0;
+    f(count);
     return 0;
 }
